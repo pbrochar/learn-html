@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style/style.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="icon" href="assets/favicon.ico" />
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
@@ -17,17 +18,26 @@
 <body class="gradient">
 	<div id="app">
 		<nav id="header" class="fixed-nav bg-dark-blue progressive">
-			<div class="brand-container">
-				<a href="#home">
-					<div class="logo-container">
-						<img id="logo" class="logo" src="assets/images/paperz_logo_white.svg" alt="logo de Paperz" height="50px" width="50px" />
-			 		</div>
-					<div id="brand-name" class="brand text-white">
-						<span>P</span><span>a</span><span>p</span><span>e</span><span>r</span><span>z</span>
-					</div>
-				</a>
+			<div class="head-nav-mobile">
+				<div class="brand-container">
+					<a href="#home">
+						<div class="logo-container">
+							<img id="logo" class="logo" src="assets/images/paperz_logo_white.svg" alt="logo de Paperz" height="50px" width="50px" />
+						</div>
+						<div id="brand-name" class="brand text-white">
+							<span>P</span><span>a</span><span>p</span><span>e</span><span>r</span><span>z</span>
+						</div>
+					</a>
+				</div>
+				<div id="burger">
+					<svg id="burger-svg" class="burger-svg-white" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27" xml:space="preserve">
+						<rect  width="34" height="4"/>
+						<rect y="11" width="34" height="4"/>
+						<rect y="23" width="34" height="4"/>
+					</svg>
+				</div>
 			</div>
-			<div class="buttons-container">
+			<div id="menu" class="buttons-container">
 				<a href="#features" class="nav-buttons text-white">Features</a>
 				<a href="#contact" class="nav-buttons text-white">Keep in touch</a>
 			</div>
@@ -137,19 +147,23 @@
 						<img class="logo" src="assets/images/paperz_logo_white.svg" alt="logo de Paperz" height="50px" width="50px" />
 					</div>
 					<div class="text-white">
-						<span>P</span><span>a</span><span>p</span><span>e</span><span>r</span><span>z</span>
+						<h2>Paperz</h2>
 					</div>
 				</div>
 				<div id="footer-info">
 					<section class="text-white">
 						<h3>LEGAL</h3>
-						<a href="">Credits</a>
-						<a href="">Privacy</a>
+						<div class="footer-items">
+							<a href="">Credits</a>
+							<a href="">Privacy</a>
+						</div>
 					</section>
 					<section class="text-white">
 						<h3>COMPANY</h3>
-						<a href="">Github</a>
-						<a href=>Contact</a>
+						<div class="footer-items">
+							<a href="">Github</a>
+							<a href=>Contact</a>
+						</div>
 					</section>
 
 				</div>
@@ -158,35 +172,70 @@
 	</div>
 	<script>
 	  var scrollpos = window.scrollY;
-      var nav = document.getElementById("header");
-	  var brandName = document.getElementById("brand-name")
-	  var logo = document.getElementById("logo")
-	  var navButtons = document.querySelectorAll(".nav-buttons");
+		var nav = document.getElementById("header");
+		var brandName = document.getElementById("brand-name")
+		var logo = document.getElementById("logo")
+		var navButtons = document.querySelectorAll(".nav-buttons");
+		var burger = document.getElementById("burger-svg");
+		var menuButton = document.querySelector('#burger');
+		var menu = document.querySelector('#menu');
 
+		document.addEventListener("scroll", function () {
+			scrollpos = window.scrollY;
 
-      document.addEventListener("scroll", function () {
-        /*Apply classes for slide in bar*/
-        scrollpos = window.scrollY;
+			if (scrollpos > 10) {
+				nav.classList.add("bg-white");
+				nav.classList.add("shadow");
+				logo.src = "assets/images/paperz_logo_blue.svg"
+				brandName.classList.add("text-blue");
+				burger.classList.replace('burger-svg-white', 'burger-svg-blue');
+				for (var i = 0; i < navButtons.length; i++) {
+					navButtons[i].classList.add("text-blue");
+				}
+			} else if (menu.classList.contains('buttons-container')){
+				nav.classList.remove("bg-white");
+				brandName.classList.remove("text-blue");
+				nav.classList.remove("shadow");
+				burger.classList.replace('burger-svg-blue', 'burger-svg-white');
+				logo.src = "assets/images/paperz_logo_white.svg"
+				for (var i = 0; i < navButtons.length; i++) {
+					navButtons[i].classList.remove("text-blue");
+				}
+			}
+		});
+	</script>
+	<script>
+		if (window.matchMedia("(max-width: 1024px)").matches) {
 
-        if (scrollpos > 10) {
-          nav.classList.add("bg-white");
-		  nav.classList.add("shadow");
-		  logo.src="assets/images/paperz_logo_blue.svg"
-		  brandName.classList.add("text-blue");
-		  for (var i = 0; i < navButtons.length; i++) {
-			  navButtons[i].classList.add("text-blue");
-		  }
-		} else {
-		  nav.classList.remove("bg-white");
-		  brandName.classList.remove("text-blue");
-		  nav.classList.remove("shadow");
-		  logo.src="assets/images/paperz_logo_white.svg"
-		  for (var i = 0; i < navButtons.length; i++) {
-			  navButtons[i].classList.remove("text-blue");
-		  }
-		}
-	  });
-          //Use to switch toggleColour colours
+				menuButton.addEventListener('click', function () {
+					classList = menu.classList
+					if (classList.contains('buttons-container')) {
+						nav.classList.add("bg-white");
+						nav.classList.add("shadow");
+						logo.src = "assets/images/paperz_logo_blue.svg"
+						brandName.classList.add("text-blue");
+						classList.replace('buttons-container', 'burger-on');
+						burger.classList.replace('burger-svg-white', 'burger-svg-blue');
+						for (var i = 0; i < navButtons.length; i++) {
+							navButtons[i].classList.add("text-blue");
+						}
+					} else {
+						if (scrollpos === 0) {
+
+							nav.classList.remove("bg-white");	
+							brandName.classList.remove("text-blue");
+							nav.classList.remove("shadow");
+							burger.classList.replace('burger-svg-blue', 'burger-svg-white');
+							logo.src = "assets/images/paperz_logo_white.svg"
+							for (var i = 0; i < navButtons.length; i++) {
+								navButtons[i].classList.remove("text-blue");
+							}
+						}
+						classList.replace('burger-on', 'buttons-container');
+					}
+				});
+			}
+
 	</script>
 	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>

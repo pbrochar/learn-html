@@ -3,8 +3,8 @@
 :root{
 	--dark-blue: #00007E;
 	--light-blue: #0066FF;
-	--wave-header: url('assets/wave-header.svg');
-	--wave-footer: url('assets/wave-foot.svg');
+	--wave-header: url('../assets/wave-header.svg');
+	--wave-footer: url('../assets/wave-foot.svg');
 }
 
 body, html {
@@ -24,6 +24,9 @@ input[type=text]{
 	text-align: center;
 }
 
+#burger {
+	display: none;
+}
 .shadow {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -48,6 +51,7 @@ input[type=text]{
 .progressive {
     transition-duration: .3s;
 }
+
 
 
 #header {
@@ -131,9 +135,8 @@ nav .buttons-container .nav-buttons:hover {
 	padding-top: 6rem;
 	padding-left: 15rem;
 	padding-right: 20rem;
-
 }
-	
+
 .home-buttons-container {
 	display: flex;
 	flex-direction: row;
@@ -272,8 +275,16 @@ nav .buttons-container .nav-buttons:hover {
 	gap: 25rem;
 }
 
-#footer section, #footer section a{
+#footer section{
 	display: flex;
+	flex-direction: column;
+	color: white;
+	gap: 1rem;
+	text-decoration: none;
+}
+
+#footer section a{
+display: flex;
 	flex-direction: column;
 	color: white;
 	gap: 1rem;
@@ -308,7 +319,7 @@ nav .buttons-container .nav-buttons:hover {
   transition: 1s ease-in-out;
 }
 
-svg {
+.btn svg {
   position: absolute;
   left: 0;
   top: 0;
@@ -338,8 +349,9 @@ svg {
 	#header {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: start;
 		justify-content: space-between;
+		padding: 1rem 2rem;
 	}
 	.fixed-nav {
 		position: fixed;
@@ -349,16 +361,30 @@ svg {
 		left: 0;
 		z-index: 30;
 	}
+	nav .buttons-container{
+		display: none;
+	}
+	.burger-on {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		flex-wrap: wrap;
+		transition-duration: 4s;
+	}
+	.burger-on a {
+		font-size: 1.5rem;
+		padding-top: .5rem;
+		text-decoration: none;
+	}
 	.home-container {
 		flex-direction: column;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 2rem;
-		padding-top: 5rem;
+		padding-top: 2rem;
 		padding-left: 1rem;
 		padding-right: 1rem;
-
 	}
 	.home-buttons-container {
 		display: flex;
@@ -391,7 +417,7 @@ svg {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 10rem;
+		padding-top: 6rem;
 		text-align: center;
 	}
 	.feature-card {
@@ -403,4 +429,91 @@ svg {
 	.down-on-resize{
 		order: 1;
 	}
+	.feature-card .card-img {
+		width: 100%;
+		padding: 1.5rem;
+	}
+	.feature-card .text {
+		max-width: 30rem;
+		text-align: left;
+		padding: 1rem;
+		text-align: justify;
+	}
+	#contact h2{
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	#contact p {
+	font-size: 1rem;
+	font-weight: normal;
+	}
+	input[type=text]{
+		width: 20rem;
+		padding: 1rem;
+		height: 0.5rem;
+		border: none; 
+		border-radius: .25rem;
+		text-align: center;
+	}
+	#footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 5rem 1rem 2rem 1rem;
+	}
+	#footer-info {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 1rem;
+		padding-left: 2rem;
+		width: 100vw;
+	}
+	#footer section .footer-items{
+		display: flex;
+		flex-direction: row;
+		color: white;
+		gap: 1rem;
+		text-decoration: none;
+	}
+	#footer section{
+		display: flex;
+		flex-direction: column;
+		color: white;
+		gap: 0rem;
+		text-decoration: none;
+	}
+	#footer h2{
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	#footer .brand-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+	}
+	#home{
+		padding-top: 1rem;
+	}
+	#burger {
+		display: flex;
+		cursor: pointer;
+		transition-duration: .3s
+	}
+	.head-nav-mobile {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%
+	}
+	.burger-svg-white {
+		fill: white;
+	}
+	.burger-svg-blue {
+		fill: var(--light-blue)
+	}
+
 }
