@@ -1,0 +1,13 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" class="iconLeft">
+ <g>
+  <title>Layer 1</title>
+  <g fill-opacity="0" fill="#ffffff" transform="matrix(1.95655, 0, 0, 1.95655, -0.957163, -1.95716)" id="ea27d138-f646-440e-bc08-b4e6356a287d">
+   <g id="svg_2" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="2">
+    <circle stroke="#ffffff" fill="#ffffff" id="svg_3" r="9.88" cy="30.33542" cx="39.15307"/>
+    <circle stroke="#ffffff" fill="#ffffff" id="svg_4" r="5.051" cy="43.99342" cx="15.93807"/>
+    <circle stroke="#ffffff" fill="#ffffff" id="svg_5" r="7.28899" cy="20.62142" cx="10.32207"/>
+    <path stroke="#ffffff" fill="#ffffff" id="svg_6" d="m34.70207,7.46542a4.42,4.42 0 0 1 -8.126,2.413a4.421,4.421 0 1 1 8.126,-2.413zm-7.508,3.157l-10.555,5.51m0,8.967l12.633,2.809m1.215,8.66l-9.498,5.202"/>
+   </g>
+  </g>
+ </g>
+</svg>

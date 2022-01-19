@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		  AOS.init();
+		});
+	</script>
+	<title>Paperz</title>
+</head>
+<body class="gradient">
+	<div id="app">
+		<nav id="header" class="fixed-nav bg-dark-blue progressive">
+			<div class="brand-container">
+				<a href="#home">
+					<div class="logo-container">
+						<img id="logo" class="logo" src="assets/images/paperz_logo_white.svg" alt="logo de Paperz" height="50px" width="50px" />
+			 		</div>
+					<div id="brand-name" class="brand text-white">
+						<span>P</span><span>a</span><span>p</span><span>e</span><span>r</span><span>z</span>
+					</div>
+				</a>
+			</div>
+			<div class="buttons-container">
+				<a href="#features" class="nav-buttons text-white">Features</a>
+				<a href="#contact" class="nav-buttons text-white">Keep in touch</a>
+			</div>
+		</nav>
+		<div id="home" class="text-white">
+			<div class="home-container bg-dark-blue">
+				<article class="article-text">
+					<h1>Save time in your scientific watch with Paperz.</h1>
+					<p>Let us extremely simplify your scientific watch by using our AI-assisted app.</p> 
+					<div class="home-buttons-container">
+						<a href="#features">
+							<div class="container">
+								<div class="center">
+								<button class="btn">
+									<svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+									<polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+									<polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+									</svg>
+									<span>Discover</span>
+								</button>
+								</div>
+							</div>
+						</a>
+						<a href="#contact">
+							<div class="container">
+								<div class="center">
+								<button class="btn">
+									<svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+									<polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+									<polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+									</svg>
+									<span>Keep me in touch</span>
+								</button>
+								</div>
+							</div>
+						</a>
+					</div>
+				</article>
+				<img src="assets/images/todolist.png" alt="business" />
+			</div>
+			<div class="spacer layer"></div>
+		</div>
+		<div id="features" class="bg-white">
+			<div class="features-title">
+				<h1>Speed Up</h1>
+				<div class="underline"></div>
+			</div>
+			<article data-aos="zoom-in" data-aos-duration="500" class="feature-card">
+				<div class="text">
+					<h2>Searching</h2>
+					<p>by using our complete <span>sarch tool</span> to <span>find</span>, <spa>filter</span> and <span>sort</span> what you want and <span>get suggestions</span> about what you are reading.</p>
+				</div>
+				<div class="card-img">
+					<img src="assets/images/1.jpg"/>
+				</div>
+			</article>
+			<article data-aos="zoom-in" data-aos-duration="500" class="feature-card">
+				<div class="down-on-resize card-img">
+					<img src="assets/images/2.jpg"/>
+				</div>
+				<div class="text">
+					<h2>Reading</h2>
+					<p>using our article <span>summarize</span> and  <span>translation</span> features to optimize your reading. You <span>keep access</span> to the original article through an <span>ergonomic</span> interface.</p>
+				</div>
+			</article>
+			<article data-aos="zoom-in" data-aos-duration="500" class="feature-card">
+				<div class="text">
+					<h2>Article bundling</h2>
+					<p>by creating <span>personal reviews</span> that you can <span>annotate</span> and <span>publish</span>. You can also <span>search</span> for existing and people's public <span>personnal reviews</span> to start your search with good foundations.</p>
+				</div>
+				<div class="card-img">
+					<img src="assets/images/3.jpg"/>
+				</div>
+			</article>
+			<article data-aos="zoom-in" data-aos-duration="500" class="feature-card">
+				<div class="down-on-resize card-img">
+					<img src="assets/images/4.jpg"/>
+				</div>
+				<div class="text">
+					<h2>Sharing</h2>
+					<p>your work by <span>publishing</span> your personnal reviews or <span>giving access</span> to people to <span>collaborate</span> on your personnal review. </p>
+				</div>
+			</article>
+		</div>
+		<div class="spacer-foot layer-foot"></div>
+			<div id="contact" class="text-white bg-dark-blue">
+				<h2>Get informed</h2>
+				<p>If you want to be a beta tester or just want to know about the progress of the app and its release date:</p>
+				<form >
+					<input type="text" id="fname" name="firstname" placeholder="Leave your mail here">
+				</form>
+				<div class="container">
+					<div class="center">
+						<button class="btn">
+							<svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+							<polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+							<polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+							</svg>
+							<span>Submit</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div id="footer" class="bg-dark-blue">
+				<div class="brand-container">
+					<div class="logo-container">
+						<img class="logo" src="assets/images/paperz_logo_white.svg" alt="logo de Paperz" height="50px" width="50px" />
+					</div>
+					<div class="text-white">
+						<span>P</span><span>a</span><span>p</span><span>e</span><span>r</span><span>z</span>
+					</div>
+				</div>
+				<div id="footer-info">
+					<section class="text-white">
+						<h3>LEGAL</h3>
+						<a href="">Credits</a>
+						<a href="">Privacy</a>
+					</section>
+					<section class="text-white">
+						<h3>COMPANY</h3>
+						<a href="">Github</a>
+						<a href=>Contact</a>
+					</section>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	  var scrollpos = window.scrollY;
+      var nav = document.getElementById("header");
+	  var brandName = document.getElementById("brand-name")
+	  var logo = document.getElementById("logo")
+	  var navButtons = document.querySelectorAll(".nav-buttons");
+
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          nav.classList.add("bg-white");
+		  nav.classList.add("shadow");
+		  logo.src="assets/images/paperz_logo_blue.svg"
+		  brandName.classList.add("text-blue");
+		  for (var i = 0; i < navButtons.length; i++) {
+			  navButtons[i].classList.add("text-blue");
+		  }
+		} else {
+		  nav.classList.remove("bg-white");
+		  brandName.classList.remove("text-blue");
+		  nav.classList.remove("shadow");
+		  logo.src="assets/images/paperz_logo_white.svg"
+		  for (var i = 0; i < navButtons.length; i++) {
+			  navButtons[i].classList.remove("text-blue");
+		  }
+		}
+	  });
+          //Use to switch toggleColour colours
+	</script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+	<!-- <script type="text/javascript" src="vue.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	
+</body>
+</html>
